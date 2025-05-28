@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reseñas</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+      }
+      .review-card {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .review-author {
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+      .review-rating {
+        color: #f5b301;
+        margin-bottom: 10px;
+      }
+      .review-text {
+        color: #444;
+      }
+      @media (max-width: 600px) {
+        .review-card {
+          padding: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="producto.html">Producto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="resenas.html">Reseñas</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Reseñas de Clientes</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Lo que opinan nuestros clientes</h2>
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-author">Ana López</div>
+            <div class="review-rating">★★★★★</div>
+            <div class="review-text">
+              Excelente servicio y productos de gran calidad. ¡Muy recomendado!
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-author">Carlos Pérez</div>
+            <div class="review-rating">★★★★☆</div>
+            <div class="review-text">
+              Buena atención y entrega rápida. Volveré a comprar.
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-author">María García</div>
+            <div class="review-rating">★★★★★</div>
+            <div class="review-text">
+              Me encantó el producto, superó mis expectativas.
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-author">Juan Torres</div>
+            <div class="review-rating">★★★☆☆</div>
+            <div class="review-text">
+              El producto es bueno, pero el envío tardó un poco más de lo
+              esperado.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Mi Sitio Web</p>
+    </footer>
+  </body>
+</html>
