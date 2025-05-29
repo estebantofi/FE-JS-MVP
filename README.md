@@ -7,27 +7,37 @@ Este proyecto es una aplicación web simple desarrollada como parte de un trabaj
 ```
 FE-JS-MVP/
 │
-├── index.html         # Página principal (Inicio)
-├── producto.html      # Página de productos
+├── index.html         # Página principal (Inicio) con mini menú lateral
+├── producto.html      # Página de productos con tarjetas visuales
 ├── contacto.html      # Página de contacto
-├── resenas.html       # Página de reseñas de clientes
+├── resenas.html       # Página de reseñas de clientes en cuadrícula
 ├── css/
-│   └── styles.css     # Hoja de estilos principal
+│   └── styles.css     # Hoja de estilos principal y fondo personalizado
+├── img/
+│   ├── 1.png          # Imagen de producto 1
+│   ├── 2.png          # Imagen de producto 2
+│   ├── 3.png          # Imagen de producto 3
+│   └── 4.jpg          # Imagen de fondo general
 └── README.md          # Este archivo
 ```
 
 ## Descripción de las páginas
 
-- **Inicio:** Presentación de la empresa, historia, misión y visión.
-- **Producto:** Muestra tarjetas con productos ficticios y sus descripciones.
+- **Inicio:** Presentación de la empresa, historia, misión y visión. Incluye un mini menú lateral flotante para navegación interna.
+- **Producto:** Muestra tarjetas con productos ficticios e imágenes.
 - **Contacto:** Información de contacto y ubicación.
-- **Reseñas:** Opiniones de clientes simuladas.
+- **Reseñas:** Opiniones de clientes simuladas en formato de tarjetas.
+
+## Proyecto en línea
+
+Puedes ver y probar la aplicación funcionando en GitHub Pages en el siguiente enlace:  
+👉 [https://estebantofi.github.io/FE-JS-MVP/](https://estebantofi.github.io/FE-JS-MVP/)
 
 ## Cómo usar
 
 1. Clona o descarga este repositorio.
 2. Abre cualquiera de los archivos `.html` en tu navegador web.
-3. Navega entre las páginas usando el menú de navegación superior.
+3. Navega entre las páginas usando el menú de navegación superior o el mini menú lateral en la página de inicio.
 
 ## Créditos
 
