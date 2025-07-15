@@ -1,0 +1,29 @@
+name: Deploy GitHub Pages with Env
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup dist folder and inject env
+      run: |
+        mkdir dist
+        # Inyectar la variable de entorno
+        sed "s/__API_KEY_POKEMON__/${{ secrets.API_KEY_POKEMON }}/g" env.template.js > dist/env.js
+
+        # Copiar archivos del proyecto
+        cp index.html producto.html contacto.html resenas.html dist/
+        cp -r css img dist/
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
