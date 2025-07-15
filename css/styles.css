@@ -12,7 +12,7 @@ body::before {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-image: url("../img/4.jpg");
+  background-image: url("../img/bg.jpg");
   opacity: 0.4;
   z-index: -1;
 }
@@ -40,7 +40,6 @@ nav a {
 }
 
 main {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   flex: 1;
