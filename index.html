@@ -44,14 +44,8 @@
     </style>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="producto.html">PokéCartas</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="resenas.html">Reseñas</a></li>
-      </ul>
-    </nav>
+    <!-- NAVBAR REUTILIZABLE -->
+    <div id="navbar"></div>
     <header>
       <h1>Bienvenido a PokéCartas</h1>
     </header>
@@ -67,20 +61,20 @@
         <h2>Historia</h2>
         <p>
           Fundada en 2015, PokéCartas S.A. nació de la pasión de un grupo de
-          coleccionistas por el mundo Pokémon. Comenzamos como una pequeña tienda
-          local y gracias a nuestro compromiso con la autenticidad y la calidad,
-          nos hemos convertido en una de las empresas más reconocidas en la
-          comercialización de cartas Pokémon a nivel nacional e internacional.
-          Hoy, contamos con una amplia red de clientes y coleccionistas en todo
-          el mundo.
+          coleccionistas por el mundo Pokémon. Comenzamos como una pequeña
+          tienda local y gracias a nuestro compromiso con la autenticidad y la
+          calidad, nos hemos convertido en una de las empresas más reconocidas
+          en la comercialización de cartas Pokémon a nivel nacional e
+          internacional. Hoy, contamos con una amplia red de clientes y
+          coleccionistas en todo el mundo.
         </p>
       </section>
       <section id="mision">
         <h2>Misión</h2>
         <p>
           Ofrecer a nuestros clientes la mejor experiencia en la compra, venta y
-          colección de cartas Pokémon, garantizando productos originales, atención
-          personalizada y envíos seguros a cualquier parte del planeta.
+          colección de cartas Pokémon, garantizando productos originales,
+          atención personalizada y envíos seguros a cualquier parte del planeta.
         </p>
       </section>
       <section id="vision">
@@ -95,5 +89,13 @@
     <footer>
       <p>&copy; 2025 PokéCartas</p>
     </footer>
+    <script>
+      // Cargar nav.html en el placeholder
+      fetch("nav.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
   </body>
 </html>

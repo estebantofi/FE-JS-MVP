@@ -69,20 +69,14 @@
         }
 
         .card {
-          width: 95vw;
+          width: 80vw;
         }
       }
     </style>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="producto.html">PokéCartas</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="resenas.html">Reseñas</a></li>
-      </ul>
-    </nav>
+    <!-- NAVBAR REUTILIZABLE -->
+    <div id="navbar"></div>
     <header>
       <h1>PokéCartas</h1>
     </header>
@@ -94,6 +88,14 @@
     <footer>
       <p>&copy; 2025 PokéCartas</p>
     </footer>
+    <script>
+      // Cargar nav.html en el placeholder
+      fetch("nav.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
     <script src="env.js"></script>
     <script src="producto.js"></script>
   </body>
