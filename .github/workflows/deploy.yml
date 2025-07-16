@@ -19,7 +19,7 @@ jobs:
         sed "s/__API_KEY_POKEMON__/${{ secrets.API_KEY_POKEMON }}/g" env.template.js > dist/env.js
 
         # Copiar archivos del proyecto
-        cp index.html producto.html contacto.html resenas.html dist/
+        cp *.html dist/
         cp -r css img dist/
 
     - name: Deploy to GitHub Pages
