@@ -88,15 +88,7 @@
     <footer>
       <p>&copy; 2025 PokéCartas</p>
     </footer>
-    <script>
-      // Cargar nav.html en el placeholder
-      fetch("nav.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("navbar").innerHTML = data;
-        });
-    </script>
     <script src="env.js"></script>
-    <script src="producto.js"></script>
+    <script type="module" src="producto.js"></script>
   </body>
 </html>

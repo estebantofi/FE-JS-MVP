@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      .cart-details {
+        max-width: 600px;
+        margin: 40px auto;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        padding: 32px;
+      }
+
+      .cart-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 24px;
+      }
+
+      .cart-table th,
+      .cart-table td {
+        border-bottom: 1px solid #eee;
+        padding: 8px 12px;
+        text-align: left;
+      }
+
+      .cart-total {
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: right;
+        margin-top: 16px;
+      }
+
+      .btn-finalizar {
+        background: #e74c3c;
+        color: #fff;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-size: 1em;
+        cursor: pointer;
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <main>
+      <div class="cart-details">
+        <h2>Resumen de tu compra</h2>
+        <table class="cart-table" id="cart-table">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Valor</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Items del carrito -->
+          </tbody>
+        </table>
+        <div style="display: flex; justify-content: space-between">
+          <button class="btn-finalizar" id="btn-finalizar">
+            Finalizar compra
+          </button>
+          <div class="cart-total" id="cart-total">Total: $0</div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 PokéCartas</p>
+    </footer>
+    <script type="module" src="compra.js"></script>
+  </body>
+</html>
