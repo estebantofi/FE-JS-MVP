@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/form.css" />
   </head>
   <body>
     <!-- NAVBAR REUTILIZABLE -->
@@ -20,14 +21,43 @@
       <h1>Contacto</h1>
     </header>
     <main>
+      <!-- Formulario de contacto -->
       <section>
-        <h2>Formulario de Contacto</h2>
-        <p>Aquí puedes ponerte en contacto con nosotros.</p>
+        <form
+          action="https://formspree.io/f/xpwlwpva"
+          class="fs-form"
+          method="POST"
+        >
+          <div class="fs-field">
+            <label class="fs-label" for="name">Nombre</label>
+            <input class="fs-input" id="name" name="name" />
+          </div>
+          <div class="fs-field">
+            <label class="fs-label" for="email">Email</label>
+            <input class="fs-input" id="email" name="email" required />
+          </div>
+          <div class="fs-field">
+            <label class="fs-label" for="message">Mensaje</label>
+            <textarea
+              class="fs-textarea"
+              id="message"
+              name="message"
+              placeholder="Escribe tu mensaje aquí..."
+            ></textarea>
+          </div>
+          <div class="fs-button-group">
+            <button class="fs-button" type="submit">Enviar</button>
+          </div>
+        </form>
       </section>
+      <!-- End Formulario de contacto -->
+      <br />
+      <!-- Dirección -->
       <section>
         <h2>Nuestra Ubicación</h2>
         <p>Dirección y mapa de nuestra ubicación.</p>
       </section>
+      <!-- End Dirección -->
     </main>
     <footer>
       <p>&copy; 2025 PokéCartas</p>

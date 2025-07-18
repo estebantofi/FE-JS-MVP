@@ -1,9 +1,12 @@
 import { updateCartCount } from "./cartCount.js";
+import { hamburguerMenu } from "./hamburguerMenu.js";
 
 fetch("nav.html")
   .then((res) => res.text())
   .then((nav) => {
     document.getElementById("navbar").innerHTML = nav;
+
+    hamburguerMenu();
     updateCartCount();
   });
 
@@ -26,7 +29,6 @@ function renderCart() {
         <button class="btn-plus" data-id="${item.id}">+</button>
       </td>
       <td>$${item.price}</td>
-      <td>$${(item.price * item.quantity).toFixed(2)}</td>
       <td><button class="btn-remove" data-id="${item.id}">🗑️</button></td>
     `;
 
